@@ -8,13 +8,9 @@ print(response.url)
 print(response.status_code)
 
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def hii():
     if not response.url == 'https://ta.ta2deem7arbya.com/2021/11/13/cfd-industry-and-benefits-of-trading-exness/':
         return "Success"
     else:
         return "error"
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
